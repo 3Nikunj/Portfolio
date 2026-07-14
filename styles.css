@@ -236,17 +236,17 @@ a {
   text-decoration: none;
 }
 
-.hud__mark {
-  width: 42px;
-  height: 42px;
-  display: grid;
-  place-items: center;
+.hud__profile {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  padding: 2px;
   clip-path: polygon(15% 0, 85% 0, 100% 28%, 100% 72%, 85% 100%, 15% 100%, 0 72%, 0 28%);
   background: var(--accent);
-  color: #071115;
-  font-family: "Oxanium", sans-serif;
-  font-weight: 800;
-  transition: background 300ms ease;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 0 0 2px rgba(7, 17, 21, 0.82), 0 0 18px color-mix(in srgb, var(--accent) 38%, transparent);
+  transition: background 300ms ease, box-shadow 300ms ease;
 }
 
 .hud__identity strong,
@@ -1132,10 +1132,10 @@ a {
     padding: 11px 14px;
   }
 
-  .hud__mark {
-    width: 36px;
-    height: 36px;
-    font-size: 0.78rem;
+  .hud__profile {
+    width: 40px;
+    height: 40px;
+    flex-basis: 40px;
   }
 
   .hud__identity small,
